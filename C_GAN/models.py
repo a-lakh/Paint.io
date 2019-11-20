@@ -1,19 +1,6 @@
 import torch.nn as nn
 import torch.nn.functional as F
 
-def init_parameters(m):
-    '''
-    classname = m.__class__.__name__
-    if classname.find('Conv') != -1:
-        torch.nn.init.normal(m.weight.data, 0.0, 0.02)
-    elif classname.find('BatchNorm2d') != -1:
-        torch.nn.init.normal(m.weight.data, 1.0, 0.02)
-        torch.nn.init.constant(m.bias.data, 0.0)
-    '''        
-    if (isinstance(m, nn.Conv2d) or isinstance(m, nn.InstanceNorm2d)):
-        torch.nn.init.xavier_normal_(m.weight.data)
-        torch.nn.init.zeros_(m.bias.data)     #Can Change This
-
 class ResidualBlock(nn.Module):
     def __init__(self, in_features):
         super(ResidualBlock, self).__init__()
