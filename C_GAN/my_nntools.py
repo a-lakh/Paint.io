@@ -44,10 +44,6 @@ class NeuralNetwork(nn.Module, ABC):
     def forward(self, x):
         pass
 
-    @abstractmethod
-    def criterion(self, y, d):
-        pass
-
 
 class StatsManager(object):
     """
@@ -312,15 +308,15 @@ class Experiment(object):
 
                 # Real loss
                 real_pred = self.net.D_A(real_a)
-                loss_D_real = self.net.criterion_GAN(real_pred, self.real_target)
+                loss_DA_real = self.net.criterion_GAN(real_pred, self.real_target)
 
                 # Fake loss
                 fake_a = self.net.fake_a_buffer.push_and_pop(fake_a)
                 fake_pred = self.net.D_A(fake_a.detach())
-                loss_D_fake = self.net.criterion_GAN(fake_pred, self.fake_target)
+                loss_DA_fake = self.net.criterion_GAN(fake_pred, self.fake_target)
 
                 # Total loss
-                loss_D_A = (loss_D_real + loss_D_fake)*0.5
+                loss_D_A = (loss_DA_real + loss_DA_fake)*0.5
                 loss_D_A.backward()
 
                 self.optimizer_D_A.step()
@@ -331,15 +327,15 @@ class Experiment(object):
 
                 # Real loss
                 real_pred = self.net.D_B(real_b)
-                loss_D_real = self.net.criterion_GAN(real_pred, self.real_target)
+                loss_DB_real = self.net.criterion_GAN(real_pred, self.real_target)
                 
                 # Fake loss
                 fake_b = self.net.fake_b_buffer.push_and_pop(fake_b)
                 fake_pred = self.net.D_B(fake_b.detach())
-                loss_D_fake = self.net.criterion_GAN(fake_pred, self.fake_target)
+                loss_DB_fake = self.net.criterion_GAN(fake_pred, self.fake_target)
 
                 # Total loss
-                loss_D_B = (loss_D_real + loss_D_fake)*0.5
+                loss_D_B = (loss_DB_real + loss_DB_fake)*0.5
                 loss_D_B.backward()
 
                 self.optimizer_D_B.step()
@@ -373,7 +369,6 @@ class Experiment(object):
                 real_a, real_b = real_a.to(self.net.device), real_b.to(self.net.device)
 
                 ###### Generators A2B and B2A ######
-                self.optimizer_G.zero_grad()
 
                 # Identity loss
                 # G_A2B(b) should equal b if real b is fed
@@ -401,13 +396,10 @@ class Experiment(object):
 
                 # Total loss
                 loss_G = loss_Idt_A + loss_Idt_B + loss_GAN_A2B + loss_GAN_B2A + loss_cycle_ABA + loss_cycle_BAB
-                loss_G.backward()
                 
-                self.optimizer_G.step()
                 ###################################
 
                 ###### Discriminator A ######
-                self.optimizer_D_A.zero_grad()
 
                 # Real loss
                 real_pred = self.net.D_A(real_a)
@@ -420,13 +412,10 @@ class Experiment(object):
 
                 # Total loss
                 loss_D_A = (loss_D_real + loss_D_fake)*0.5
-                loss_D_A.backward()
-
-                self.optimizer_D_A.step()
+                
                 ###################################
 
                 ###### Discriminator B ######
-                self.optimizer_D_B.zero_grad()
 
                 # Real loss
                 real_pred = self.net.D_B(real_b)
