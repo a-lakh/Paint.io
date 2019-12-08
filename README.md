@@ -15,3 +15,10 @@ Code organization
 * Gatys transfer/main.ipynb --  Run the training of our Gatys style transfer model (as described in Section 4)  
 * Gatys transfer/gatys_style_experiments.ipynb  
 
+Datasets
+========
+
+![gan_compare-min](https://user-images.githubusercontent.com/28579156/70397521-c60abc00-19c7-11ea-9577-830353f390cb.png)
+
+![gatys_compare_n-min](https://user-images.githubusercontent.com/28579156/70397524-d02cba80-19c7-11ea-8c6d-698556e8e84c.png)
+
