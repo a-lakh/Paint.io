@@ -13,8 +13,9 @@ Code organization
 * CycleGAN/my_nntools.py -- helper Classes needed for training CycleGAN
 * CycleGAN/main.py -- script for training/testing CycleGAN
 * Gatys_transfer/Demo.ipynb -- Run a demo of our Gatys style transfer code  
-* Gatys_transfer/main.ipynb --  Run the training of our Gatys style transfer model (as described in Section 4)  
-* Gatys_transfer/gatys_style_experiments.ipynb -- Run experiments for gatys style transfer (as described in Section 5)
+* Gatys_transfer/GatysStyleTransfer.ipynb --  Run the training of our Gatys style transfer model with VGG (as described in Section 4)  
+* Gatys_transfer/GatysExperiment1.ipynb -- Run experiments for gatys style transfer with VGG (as described in Section 5)
+* Gatys_transfer/AlexNetStyleTransfer.ipynb -- Run experiment for gatys style transfer with Alexnet (as described in Section 5)
 
 Datasets
 ========
