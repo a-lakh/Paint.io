@@ -22,7 +22,7 @@ The datasets can be downloaded from https://people.eecs.berkeley.edu/~taesung_pa
 Results
 ========
 
-##Cycle GAN
+## Cycle GAN
 
 ![gan_compare-min](https://user-images.githubusercontent.com/28579156/70397521-c60abc00-19c7-11ea-9577-830353f390cb.png)
 
