@@ -5,9 +5,9 @@ This is project on Style Transfer is developed by team Paint.io composed of Ayon
 
 Code organization
 =================
-CycleGAN/demo.ipynb -- Run a demo of our CycleGAN code  
-CycleGAN/train.ipynb --  Run the training of our CycleGAN model (as described in Section 4)  
-CycleGAN/CycleGAN_experiments.ipynb --  
+* CycleGAN/demo.ipynb -- Run a demo of our CycleGAN code  
+* CycleGAN/train.ipynb --  Run the training of our CycleGAN model (as described in Section 4)  
+* CycleGAN/CycleGAN_experiments.ipynb --  
 CycleGAN/models.py --  
 CycleGAN/utils.py --  
 CycleGAN/my_nntools.py --  
