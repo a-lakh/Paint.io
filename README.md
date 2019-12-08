@@ -7,13 +7,14 @@ Code organization
 =================
 * CycleGAN/demo.ipynb -- Run a demo of our CycleGAN code  
 * CycleGAN/train.ipynb --  Run the training of our CycleGAN model (as described in Section 4)  
-* CycleGAN/CycleGAN_experiments.ipynb --  
-* CycleGAN/models.py --  
-* CycleGAN/utils.py --  
-* CycleGAN/my_nntools.py --  
-* Gatys transfer/demo.ipynb -- Run a demo of our Gatys style transfer code  
-* Gatys transfer/main.ipynb --  Run the training of our Gatys style transfer model (as described in Section 4)  
-* Gatys transfer/gatys_style_experiments.ipynb  
+* CycleGAN/CycleGAN_experiments.ipynb -- Run experiments for CycleGAN (as described in Section 5)
+* CycleGAN/models.py -- contain generator and discrimator classes
+* CycleGAN/utils.py -- helper Classes and methods 
+* CycleGAN/my_nntools.py -- helper Classes needed for training CycleGAN
+* CycleGAN/main.py -- script for training/testing CycleGAN
+* Gatys_transfer/Demo.ipynb -- Run a demo of our Gatys style transfer code  
+* Gatys_transfer/main.ipynb --  Run the training of our Gatys style transfer model (as described in Section 4)  
+* Gatys_transfer/gatys_style_experiments.ipynb -- Run experiments for gatys style transfer (as described in Section 5)
 
 Datasets
 ========
