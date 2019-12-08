@@ -40,5 +40,5 @@ Results
 
 Acknowledgements
 ================
-We thank Prof. Charles Delledalle and Inderjot Saggu for their guidance and support.
+We thank Prof. Charles Deledalle and Inderjot Saggu for their guidance and support.
 
