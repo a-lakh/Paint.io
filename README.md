@@ -24,8 +24,8 @@ Results
 
 ## Cycle GAN
 
-![gan_compare-min](https://user-images.githubusercontent.com/28579156/70397521-c60abc00-19c7-11ea-9577-830353f390cb.png)
-<img src="https://user-images.githubusercontent.com/28579156/70397521-c60abc00-19c7-11ea-9577-830353f390cb.png" width="48">
+[//]![gan_compare-min](https://user-images.githubusercontent.com/28579156/70397521-c60abc00-19c7-11ea-9577-830353f390cb.png)
+<img src="https://user-images.githubusercontent.com/28579156/70397521-c60abc00-19c7-11ea-9577-830353f390cb.png" width="300">
 ## Gatys Style transfer
 
 ![gatys_compare_n-min](https://user-images.githubusercontent.com/28579156/70397524-d02cba80-19c7-11ea-8c6d-698556e8e84c.png)
