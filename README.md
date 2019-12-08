@@ -16,10 +16,15 @@ Code organization
 * Gatys_transfer/GatysStyleTransfer.ipynb --  Run the training of our Gatys style transfer model with VGG (as described in Section 4)  
 * Gatys_transfer/GatysExperiment1.ipynb -- Run experiments for gatys style transfer with VGG (as described in Section 5)
 * Gatys_transfer/AlexNetStyleTransfer.ipynb -- Run experiment for gatys style transfer with Alexnet (as described in Section 5)
+* Gatys_transfer/images -- images used for gatys style transfer 
 
 Datasets
 ========
 The datasets can be downloaded from https://people.eecs.berkeley.edu/~taesung_park/CycleGAN/datasets
+
+Models
+======
+The pretrained models for CycleGAN can be found at : https://drive.google.com/drive/folders/1hbsJI9wa1f4-3xF1C5hwBdqewvD0KYsl?usp=sharing
 
 Results
 ========
